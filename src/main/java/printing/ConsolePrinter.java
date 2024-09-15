@@ -304,16 +304,4 @@ public class ConsolePrinter implements Printer {
         System.out.print(format());
         reset();
     }
-
-    public static void main(String[] args) {
-        Printer printer = new ConsolePrinter();
-
-        printer.addCommand(new BackgroundColorCommand(Color.BLACK));
-        printer.addCommand(new TextColorCommand(Color.WHITE));
-        printer.addCommand(new TextCommand("123456789"));
-        printer.addCommand(new ColumnCommand(8));
-        printer.addCommand(new TextStyleCommand(TextStyle.DEFAULT));
-        printer.addCommand(new AlignmentCommand(Alignment.LEFT));
-        printer.print();
-    }
 }
